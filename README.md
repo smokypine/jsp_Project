@@ -9,7 +9,7 @@ JSP
 
 ## 코드 실행
 ```
-index.html
+[index.jsp](https://github.com/smokypine/jsp_Project/blob/main/WebContent/index.jsp)
 ```
 
 ## 조직도
