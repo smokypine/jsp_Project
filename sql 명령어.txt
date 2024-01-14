@@ -1,0 +1,106 @@
+CREATE DATABASE `jspdb` /*!40100 DEFAULT CHARACTER SET utf8mb3 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+
+use jspdb;
+
+-- `users` 테이블 생성
+CREATE TABLE `users` (
+  `USERCODE` int AUTO_INCREMENT,
+  `ID` varchar(20) NOT NULL,
+  `PASSWORD` varchar(20) NOT NULL,
+  `NAME` varchar(20) NOT NULL,
+  `AGE` int NOT NULL,
+  `GENDER` varchar(10) NOT NULL,
+  `EMAIL` varchar(30) DEFAULT NULL,
+  `ROLE` varchar(20) DEFAULT '일반', -- `ROLE` 열의 디폴트 값을 "일반"으로 설정
+  PRIMARY KEY (`USERCODE`),
+  UNIQUE KEY `ID_UNIQUE` (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+
+-- 데이터 삽입
+INSERT INTO `users` (ID, PASSWORD, NAME, AGE, GENDER, EMAIL, ROLE) VALUES ("root", "1234", "김동현", 30, "남자", "root@naver.com", "관리자");
+INSERT INTO `users` (ID, PASSWORD, NAME, AGE, GENDER, EMAIL) VALUES ("hong", "1234", "홍길동", 22, "남자", "hong@naver.com");
+INSERT INTO `users` (ID, PASSWORD, NAME, AGE, GENDER, EMAIL) VALUES ("park", "1234", "박문수", 42, "남자", "park@naver.com");
+INSERT INTO `users` (ID, PASSWORD, NAME, AGE, GENDER, EMAIL) VALUES ("jung", "1234", "정예지", 35, "여자", "jung@daum.net");
+
+-- 조회
+SELECT * FROM `users`;
+
+
+
+CREATE TABLE `traveldestination` (
+  `DSCODE` int AUTO_INCREMENT,
+  `DSNAME` varchar(20) NOT NULL,
+  `DSDETAIL` varchar(200) DEFAULT NULL,
+  `TYPE` varchar(40) NOT NULL,
+  `PRICE` int NOT NULL,
+  PRIMARY KEY (`DSCODE`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("디폴트", "디폴트", "패키지", 0);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("다낭", "다낭/호이안 4~6일 #가성비부터 #가심비까지 #5성호텔", "자유", 549400);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("다낭", "다낭/호이안 4~6일 #베스트셀러 #5성급호텔 #호이안 핵심일정", "패키지", 1059000);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("다낭", "다낭 5일 #가성비 #시내4성호텔 #바나산 #호이안투어 #자유시간 #쇼핑3회", "패키지", 529900);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("다낭", "[초특가-실버트립] 다낭/호이안/후에 4박6일 [무엉탄럭셔리or래디슨]", "자유", 549200);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("괌", "괌 하얏트 4/5/6일", "자유", 1075400);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("괌", "괌 힐튼 4/5/6일", "패키지", 938200);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("괌", "괌 두짓비치(구 아웃리거) 4/5/6일", "패키지", 984400);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("괌", "괌 닛코 4/5/6일", "자유", 1015200);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("괌", "괌 쉐라톤 4/5/6일", "패키지", 925200);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("괌", "괌 웨스틴 4/5/6일", "자유", 1173400);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("괌", "괌 롯데 4/5/6일", "패키지", 1116200);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("괌", "괌 두짓타니 4/5/6일", "자유", 1152400);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("사이판", "■홈쇼핑따라잡기■노팁/노옵션/노쇼핑 사이판 PIC 슈페리어룸 4일/5일 디럭스 무료 UP [마나가하섬 포함]", "패키지", 859500);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("사이판", "■홈쇼핑따라잡기■노팁/노옵션/노쇼핑 사이판 켄싱턴 호텔 로얄디럭스룸 4/5일★프리미어디럭스 무료UP★", "패키지", 1299000);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("사이판", "■베이직■ [아침출발] 사이판 켄싱턴호텔 4/5/8일◈시내관광◈", "패키지", 1152000);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("사이판", "■PCR검사비용지원■[아침출발] 코럴 오션 리조트 사이판 디럭스룸 5일", "패키지", 765500);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("사이판", "[아시아나/오전출발] 사이판 월드리조트 슈페리어룸 4/5일◈조식,석식포함/아일랜드관광◈", "패키지", 1113400);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("사이판", "■베이직■ [아침출발] 사이판 월드리조트 슈페리어룸 4/5/8일◈시내관광◈", "패키지", 842000);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("사이판", "■베이직■ [아침출발] 사이판 켄싱턴호텔 로얄디럭스룸 4/5일◈시내관광◈", "패키지", 1473400);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("사이판", "[오전출발]사이판 아쿠아리조트 디럭스가든뷰 4/5/8일◈조식포함/아일랜드관광◈", "패키지", 872000);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("필리핀", "필리핀 5박 6일 신혼여행", "패키지", 2500000);
+insert into travelDestination (DSNAME, DSDETAIL, TYPE, PRICE) values("에스파냐", "산티아고 순례길", "자유", 1500000);
+
+
+select * from travelDestination;
+
+
+CREATE TABLE `promotion` ( -- 프로모션 목록
+  `PRMCODE` int AUTO_INCREMENT,
+  `DSCODE` int NOT NULL,
+  `PRMNAME` varchar(200) NOT NULL,
+  `DISCOUNT` int NOT NULL,
+  PRIMARY KEY (`PRMCODE`),
+  FOREIGN KEY (`DSCODE`) REFERENCES `travelDestination`(`DSCODE`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+
+insert into promotion (DSCODE, PRMNAME, DISCOUNT) values (1, "디폴트", 0);
+insert into promotion (DSCODE, PRMNAME, DISCOUNT) values (2, "다낭/호이안 4~6일 #가성비부터 #가심비까지 #5성호텔 할인행사", 15);
+insert into promotion (DSCODE, PRMNAME, DISCOUNT) values (7, "괌 힐튼 4/5/6일 특가", 20);
+insert into promotion (DSCODE, PRMNAME, DISCOUNT) values (15, "■홈쇼핑따라잡기■노팁/노옵션/노쇼핑 사이판 켄싱턴 호텔 로얄디럭스룸 4/5일★프리미어디럭스 무료UP★ 할인행사", 10);
+
+select * from promotion;
+
+
+
+CREATE TABLE `reservation` ( -- 여행예약 목록
+  `RVCODE` int AUTO_INCREMENT,
+  `USERCODE` int,
+  `ID` varchar(20) NOT NULL, 
+  `DSCODE` int NOT NULL,
+  `PRMCODE` int DEFAULT 1,
+  `FIPRICE` int NOT NULL,
+  `DATE` varchar(50) NOT NULL,
+  PRIMARY KEY (`RVCODE`),
+  FOREIGN KEY (`USERCODE`) REFERENCES `users`(`USERCODE`), -- users 테이블의 USERCODE를 외래키로 참조
+  FOREIGN KEY (`ID`) REFERENCES `users`(`ID`), -- users 테이블의 ID를 외래키로 참조
+  FOREIGN KEY (`DSCODE`) REFERENCES `travelDestination`(`DSCODE`),
+  FOREIGN KEY (`PRMCODE`) REFERENCES `promotion`(`PRMCODE`) -- promotion 테이블의 PRMCODE를 외래키로 참조
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+
+insert into reservation (USERCODE, ID, DSCODE, FIPRICE, DATE) values(2, "hong", 2, 549400, "2023/08/11 ~ 2023/08/14");
+insert into reservation (USERCODE, ID, DSCODE, FIPRICE, DATE) values(2, "hong", 8, 984400, "2023/05/14 ~ 2023/05/18");
+insert into reservation (USERCODE, ID, DSCODE, FIPRICE, DATE) values(3, "park", 3, 1059000, "2023/08/13 ~ 2023/08/17");
+insert into reservation (USERCODE, ID, DSCODE, FIPRICE, DATE) values(4, "jung", 18, 1113400, "2023/06/11 ~ 2023/06/14");
+insert into reservation (USERCODE, ID, DSCODE, FIPRICE, DATE) values(4, "jung", 5, 549200, "2023/08/15 ~ 2023/08/19");
+
+select * from reservation;
