@@ -3,13 +3,16 @@
 
 ## 활용 기술
 ```
-html/css
 JSP
+html/css
+Apache Tomcat(Server)
+MySQL Workbench(Database)
 ```
 
 ## 코드 실행
 ```
-WebContent/index.jsp
+WebContent/index.jsp(메인 페이지)
+
 ```
 
 ## 조직도
@@ -17,6 +20,7 @@ WebContent/index.jsp
 
 ## 사이트 기능
 ### 1. 메인 페이지
+#### 1-1. 헤더
 <img src = "./figure/Main01.png" width="80%"><br/><br/>
 - Header를 이용해 body와 메뉴를 분리 하였으며 호버링 기능을 통해 하위 메뉴 구현.
 - Iframe을 이용해 여행 광고 페이지 구현. 광고 내부의 원형 버튼을 이용해 광고 전환 가능.
