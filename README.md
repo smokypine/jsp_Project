@@ -21,20 +21,21 @@ WebContent/index.jsp(메인 페이지)
 ## 사이트 기능
 ### 1. 메인 페이지
 #### 1-1. 헤더
-<img src = "./figure/Header.png" width="80%"><br/><br/>
+<img src = "./figure/Header.png" width="80%"><br/>
 - index 페이지와 Header 페이지를 따로 분리하여 구현함.
-- 회원 가입 링크를 클릭하면 회원 가입 페이지로 이동함.<br/><br/><br/>
+- 회원 가입 링크를 클릭하면 회원 가입 페이지로 이동함.<br/><br/>
 
-<img src = "./figure/join_membership.png" width="80%"><br/><br/>
+<img src = "./figure/join_membership.png" width="80%"><br/>
 - 회원 가입 버튼을 클릭하면 입력한 데이터가 DB에 저장되고 index.jsp 페이지로 돌아감.
 - 리셋 버튼을 클릭하면 textfield에 입력한 모든 내용이 리셋됨.<br/><br/><br/>
 
 #### 1-2. index 페이지
-<img src = "./figure/Main_Page.png" width="80%"><br/><br/>
-- <%@ include file="./header.jsp" %> 코드를 이용해 헤더 파일을 index 페이지에 불러옴. 마찬가지 방법을 이용해 footer.jsp 파일을 index 페이지 최하단에 include 함.
-- 로그인 시 로그아웃/마이페이지(root로 로그인시 관리자 페이지) 기능 지원.<br/><br/><br/>
+<img src = "./figure/Main_Page.png" width="80%"><br/>
+- <%@ include file="./header.jsp" %> 코드를 이용해 헤더 파일을 index 페이지에 불러옴.
+- 위와 마찬가지 방법을 이용해 footer.jsp 파일을 index 페이지 최하단에 include 함.
+- 로그인 시 로그아웃/마이페이지(root로 로그인시 관리자 페이지) 기능 지원.<br/><br/>
 
-<img src = "./figure/Trip_Packages" width="80%"><br/><br/>
+<img src = "./figure/Trip_Packages.png" width="80%"><br/>
 - 로그인 한 상태에서 예약하기 버튼을 클릭시 해당 회원 명의로 DB에 예약정보가 추가됨.<br/><br/>
 
 ### 2. 여행지 페이지
