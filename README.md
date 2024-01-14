@@ -13,7 +13,7 @@ WebContent/index.jsp
 ```
 
 ## 조직도
-<img src = "./figure/organazation.png" width="80%"><br/>
+<img src = "./figure/organization.png" width="80%"><br/>
 
 ## 사이트 기능
 ### 1. 메인 페이지
