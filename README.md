@@ -9,11 +9,11 @@ JSP
 
 ## 코드 실행
 ```
-[index.jsp](https://github.com/smokypine/jsp_Project/blob/main/WebContent/index.jsp)
+WebContent/index.jsp
 ```
 
 ## 조직도
-<img src = "./figure/my_organazation.png" width="80%"><br/>
+<img src = "./figure/organazation.png" width="80%"><br/>
 
 ## 사이트 기능
 ### 1. 메인 페이지
