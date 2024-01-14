@@ -21,18 +21,21 @@ WebContent/index.jsp(메인 페이지)
 ## 사이트 기능
 ### 1. 메인 페이지
 #### 1-1. 헤더
-<img src = "./figure/Main01.png" width="80%"><br/><br/>
-- Header를 이용해 body와 메뉴를 분리 하였으며 호버링 기능을 통해 하위 메뉴 구현.
-- Iframe을 이용해 여행 광고 페이지 구현. 광고 내부의 원형 버튼을 이용해 광고 전환 가능.
-- Anchor를 통한 페이지 업다운 기능 구현.<br/><br/><br/>
+<img src = "./figure/Header.png" width="80%"><br/><br/>
+- index 페이지와 Header 페이지를 따로 분리하여 구현함.
+- 회원 가입 링크를 클릭하면 회원 가입 페이지로 이동함.<br/><br/><br/>
 
-<img src = "./figure/Main02.png" width="80%"><br/><br/>
-- Hovering 기능을 이용해 호버링된 이미지의 확대/축소 기능 구현.
-- textcoloranimation method를 이용한 문자의 자동 색상 변화 구현.<br/><br/><br/>
+<img src = "./figure/join_membership.png" width="80%"><br/><br/>
+- 회원 가입 버튼을 클릭하면 입력한 데이터가 DB에 저장되고 index.jsp 페이지로 돌아감.
+- 리셋 버튼을 클릭하면 textfield에 입력한 모든 내용이 리셋됨.<br/><br/><br/>
 
-<img src = "./figure/Main03.png" width="80%"><br/><br/>
-- 페이지 상단 iframe 우측의 앵커 리스트와 연동된 업다운 기능 구현.
-- [상담 문의 이미지](./메인/상담.jpg)에 좌표를 지정하여 상세보기 위치를 클릭하면 ARS 상담 팝업 창이 출력되는 기능 구현.<br/><br/>
+#### 1-2. index 페이지
+<img src = "./figure/Main_Page.png" width="80%"><br/><br/>
+- <%@ include file="./header.jsp" %> 코드를 이용해 헤더 파일을 index 페이지에 불러옴. 마찬가지 방법을 이용해 footer.jsp 파일을 index 페이지 최하단에 include 함.
+- 로그인 시 로그아웃/마이페이지(root로 로그인시 관리자 페이지) 기능 지원.<br/><br/><br/>
+
+<img src = "./figure/Trip_Packages" width="80%"><br/><br/>
+- 로그인 한 상태에서 예약하기 버튼을 클릭시 해당 회원 명의로 DB에 예약정보가 추가됨.<br/><br/>
 
 ### 2. 여행지 페이지
 <img src = "./figure/map.png" width="80%"><br/><br/>
