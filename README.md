@@ -80,7 +80,7 @@ LogoutController.java (로그아웃)
 ```
 MemberDAO.java (회원가입 및 관리를 위한 function 모음)
 MemberDTO.java (MemberDAO.java에서 쓰는 데이터의 set/get)
-MemberMyPageController.java (로그인 한 사용자의 마이페이지에서 사용자의 정보를 출력/수정하는 기능)
+MemberMyPageController.java (마이페이지에서 사용자의 정보를 출력/수정하는 기능)
 
 MemberController.java (관리자 페이지의 회원 추가 기능)
 MemberChangeController.java (관리자 페이지의 회원 수정 기능)
@@ -111,7 +111,7 @@ PromotionDeleteController.java (관리자 페이지의 프로모션 삭제 기�
 ```
 ReservationDAO.java (예약을 위한 function 모음)
 ReservationDTO.java (ReservationDAO.java에서 쓰는 데이터의 set/get)
-ReservationMyPageController.java (로그인 한 사용자의 마이페이지에서 사용자의 예약 정보를 출력하는 기능)
+ReservationMyPageController.java (마이페이지에서 사용자의 예약 정보를 출력하는 기능)
 
 ReservationController.java (관리자 페이지의 예약 추가 기능)
 ReservationChangeController.java (관리자 페이지의 예약 수정 기능)
