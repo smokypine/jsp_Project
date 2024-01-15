@@ -15,7 +15,7 @@ WebContent/index.jsp(메인 페이지)
 
 ```
 
-## 조직도
+## 구현 기능
 <img src = "./figure/organization.png" width="80%"><br/>
 
 ## 메뉴별 권한
