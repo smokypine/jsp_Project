@@ -50,13 +50,19 @@ WebContent/index.jsp(메인 페이지)
 <img src = "./figure/mypage2.png" width="80%"><br/>
 - 내 예약 관리에선 해당 회원의 예약 열람/추가/수정/취소 와 같은 총 4가지 기능 지원.<br/><br/>
 
-#### 2-1. 관리자 페이지
+#### 2-2. 관리자 페이지
+<img src = "./figure/admin_page01.png" width="80%"><br/>
+- 내 예약 관리에선 해당 회원의 예약 열람/추가/수정/취소 와 같은 총 4가지 기능 지원.<br/><br/>
 
-<img src = "./figure/map.png" width="80%"><br/><br/>
-- Iframe을 이용해 [여행지 위치](https://www.google.com/maps/place/%EB%B2%A0%ED%8A%B8%EB%82%A8+%EB%8B%A4%EB%82%AD+%ED%95%98%EC%9D%B4%EC%A9%8C%EC%9A%B0+%EA%B5%B0/@16.0247149,108.1181114,11z/data=!4m6!3m5!1s0x314219b5c59ecec1:0xfd2900156004319!8m2!3d16.0472002!4d108.2199588!16s%2Fm%2F03mbk01?hl=ko&entry=ttu)가 담긴 구글맵 삽입.<br/><br/><br/>
+<img src = "./figure/admin_page02.png" width="80%"><br/>
+- 내 예약 관리에선 해당 회원의 예약 열람/추가/수정/취소 와 같은 총 4가지 기능 지원.<br/><br/>
 
-<img src = "./figure/trip.png" width="80%"><br/><br/>
-- Table 기능을 이용해 여행지 예약 페이지 구현.<br/>
+<img src = "./figure/admin_page03.png" width="80%"><br/>
+- 내 예약 관리에선 해당 회원의 예약 열람/추가/수정/취소 와 같은 총 4가지 기능 지원.<br/><br/>
+
+<img src = "./figure/admin_page04.png" width="80%"><br/>
+- 내 예약 관리에선 해당 회원의 예약 열람/추가/수정/취소 와 같은 총 4가지 기능 지원.<br/><br/>
+
 
 ## 결론
 - html을 이용하여 여행지 홈페이지를 구현
