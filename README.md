@@ -41,7 +41,17 @@ WebContent/index.jsp(메인 페이지)
 <img src = "./figure/Trip_Packages.png" width="80%"><br/>
 - 로그인 한 상태에서 예약하기 버튼을 클릭시 해당 회원 명의로 DB에 예약정보가 추가됨.<br/><br/>
 
-### 2. 마이 페이지(관리자 페이지)
+### 2. 마이 페이지/관리자 페이지
+#### 2-1. 마이 페이지
+<img src = "./figure/mypage.png" width="80%"><br/>
+- 내 정보 보기/수정 과 내 예약 관리(보기/수정) 의 기능들을 지원함.
+- 보안을 위해 각 기능을 실행하기 위해선 해당 회원의 2차 인증을 구현함.
+
+<img src = "./figure/mypage2.png" width="80%"><br/>
+- 내 예약 관리에선 해당 회원의 예약 열람/추가/수정/취소 와 같은 총 4가지 기능 지원.<br/><br/>
+
+#### 2-1. 관리자 페이지
+
 <img src = "./figure/map.png" width="80%"><br/><br/>
 - Iframe을 이용해 [여행지 위치](https://www.google.com/maps/place/%EB%B2%A0%ED%8A%B8%EB%82%A8+%EB%8B%A4%EB%82%AD+%ED%95%98%EC%9D%B4%EC%A9%8C%EC%9A%B0+%EA%B5%B0/@16.0247149,108.1181114,11z/data=!4m6!3m5!1s0x314219b5c59ecec1:0xfd2900156004319!8m2!3d16.0472002!4d108.2199588!16s%2Fm%2F03mbk01?hl=ko&entry=ttu)가 담긴 구글맵 삽입.<br/><br/><br/>
 
