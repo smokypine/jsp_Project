@@ -69,15 +69,46 @@ WebContent/index.jsp(메인 페이지)
 <img src = "./figure/admin_page04.png" width="80%"><br/>
 - 프로모션 관리 페이지에서는 프로모션 추가/수정/삭제 의 3가지 기능을 지원.<br/><br/>
 
+## 서블릿 구성
+크게 5가지 목적을 가진 대분류로 나눔.
+### 1. 회원가입/로그인/로그아웃 기능
+-	JoinController.java(회원가입)
+-	LoginController.java(로그인)
+-	LogoutController.java(로그아웃)
+
+### 2. 관리자/마이페이지 회원 관리
+-	MemberDAO.java(회원가입을 위한 function 및 회원 관리를 위한 function 모음.)
+-	MemberDTO.java(MemberDAO.java에서 쓰는 데이터의 set/get)
+-	MemberMyPageController.java(전체 회원 정보가 아닌 로그인 한 해당 사용자의 마이페이지에서 해당 사용자의 정보를 출력/수정하는 기능을 담당.)
+-	MemberController.java / MemberChangeController.java / MemberDeleteController.java 는 각각 관리자 페이지에서의 회원 추가/수정/삭제를 위한 기능을 담당.
+
+### 3. 관리자 페이지 여행지 관리
+-	DestinationDAO.java(여행지 관리를 위한 function 모음.)
+-	DestinationDTO.java(DestinationDAO.java에서 쓰는 데이터의 set/get)
+-	DestinationController.java / DestinationChangeController.java / DestinationDeleteController.java 는 각각 관리자 페이지에서의 여행지의 추가/수정/삭제를 위한 기능을 담당.
+
+### 4. 관리자 페이지 프로모션 관리
+-	PromotionDAO.java(프로모션 관리를 위한 function 모음.)
+-	PromotionDTO.java(PromotionDAO.java에서 쓰는 데이터의 set/get)
+-	PromotionController.java / PromotionChangeController.java / PromotionDeleteController.java 는 각각 관리자 페이지에서의 프로모션의 추가/수정/삭제를 위한 기능을 담당.
+
+### 5. 관리자/마이페이지 예약 관리
+-	ReservationDAO.java(예약을 위한 function 모음.)
+-	ReservationDTO.java(ReservationDAO.java에서 쓰는 데이터의 set/get)
+-	ReservationMyPageController.java(전체 회원의 예약 정보가 아닌 로그인 한 해당 사용자의 마이페이지에서 해당 사용자의 예약 정보를 출력하는 기능을 담당.)
+-	ReservationController.java / ReservationChangeController.java / ReservationDeleteController.java 는 각각 관리자 페이지에서의 예약의 추가/수정/삭제를 위한 기능을 담당.
+
 
 ## 결론
-- html을 이용하여 여행지 홈페이지를 구현
-- css를 이용해 홈페이지 디자인 구성<br/>
+- 기존의 html로 이루어졌던 정적 웹페이지를 Apache TomCat과 JSP를 이용하여 동적 웹페이지로 변경.
+- Database를 조합하여 데이터의 삽입/수정/삭제 와 로그인/회원가입 기능 구현.<br/>
 
 ## 향후 목표
-1) 로그인/회원가입/마이페이지 기능 구현.
-2) Database와의 연동을 통한 여행지 관리/예약 및 회원 관리 기능 구현.
-3) Header/footer 파일을 분리하여 import 하는 것으로 코드 최적화.<br/>
+1) 보다 적절한 UI 채택.
+2) header.jsp에 구현한 여행지 메뉴와 그 하위 메뉴를 DB에서 출력되는 방식으로 수정.
+3) 로그인에 실패하였을 경우의 LogError.jsp를 구현하여야 함.
+4) 여행지 정보 테이블의 정보 및 이미지를 DB와 연결하여 출력.
+<br/>
 
 ## 참조 사이트
 - [모두투어](https://www.modetour.com/)
