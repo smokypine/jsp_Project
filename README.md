@@ -14,7 +14,7 @@ WebContent/index.jsp(메인 페이지)
 ```
 
 ## 메뉴별 기능
-<img src = "./figure/organizatio.png" width="80%"><br/>
+<img src = "./figure/organization.png" width="80%"><br/>
 
 ## 메뉴별 권한
 <img src = "./figure/authority.png" width="80%"><br/>
